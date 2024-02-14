@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+
+@font-face {
+    font-family: "android";
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+   
+}
+
+
+
+* {         /* Configurações Golbais */
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {     /* Raiz do meu arquivo */
+
+    --cor0: #c5ebd6;    /* "--" Variáveis em CSS */
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --cor-mono1: #C5EBD6;
+    --cor-mono2: #5F9678;
+    --cor-mono3: #C5EBD6;
+    --cor-titulo: #145731;
+    --cor-negrito: #316B4B;
+
+    --font-detalhe: 'Protest Strike', sans-serif;
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font-android: "android", cursive; 
+}
+
+
+p {
+    text-align: justify;
+    
+}
+
+strong {        /* Tag negrito */
+    color: var(--cor-negrito);
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--font-padrao)
+}
+
+header h1 {
+    font-family: var(--font-detalhe);
+    font-weight: bold;
+    margin-bottom: 10px ;
+    font-size: 3em;
+    text-shadow: 5px 1px 5px rgba(0, 0, 0, 0.445);
+}
+
+header {
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to bottom , var(--cor-mono2), var(--cor-negrito));
+    padding-top: 60px;
+    padding-bottom: 2px;
+    margin: 0px;
+    min-height: 150px;
+}
+
+header p {
+    text-align: center;
+    color: white;
+    font-family: var(--font-padrao);
+    font-size: 1.2em;
+    max-width: 500px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav {
+    background-color: #2d6447;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.555);
+    margin-top: 40px;   
+}
+
+nav > a {
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #2d6447;
+    border-radius: 5px;
+    
+}
+
+nav > a:hover {
+    background-color: var(--cor-mono3);
+    color: var(--cor5);
+    transition-duration: .8s;  /* Quando passar o mouse por cima, levará 0.5segundo para fazer a transição */
+    text-decoration: none;
+}
+
+
+main {      
+    background-color: white;
+    padding: 25px;
+    /* Responsividade */
+    max-width: 1000px;
+    min-width: 300px;
+    margin: auto;
+    margin-bottom: 25px;  /* Margem da parte inferior */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.555);  /* 0 deslocamento horizontal, 0 deslocamento vertical, 10 espalhamento, cor preta */
+
+    /* Arredondamento de borda individual (parte inferior direita e inferior esquerda) */
+
+    border-bottom-left-radius:  20px;
+    border-bottom-right-radius: 20px;
+}
+
+main .droidPequeno   {
+    max-width: 350px;
+    display: block;  /* Transforma a imagem em um bloco, para depois centraliza-la com a margin: auto */
+    margin: auto;
+}
+
+img {
+    width: 100%;    
+}
+
+main h1 {
+    font-family: var(--font-android);
+    color: var(--cor-titulo);
+    padding: 5px;
+    font-weight: normal;
+    font-size: 1.6em;
+}
+
+main h2 {
+    font-family: var(--font-android);
+    font-weight: normal;
+    color: var(--cor-negrito);
+    padding: 5px;
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor-mono1), transparent);
+    text-indent: 8px;
+}
+
+main p {
+    margin: 15px 0px;
+    text-indent: 30px;  /* Espaço do parágrafo */
+    font-size: 1em;
+    line-height: 2em;  /* Espaçamento entre as linhas (altura entre linhas)*/
+}
+
+.video {        /* Fundo */
+
+    
+    background-color: #063d1e;
+    margin: 0px -25px 30px -20px;
+    padding: 20px;
+    padding-bottom: 57%;
+
+    position: relative;
+    
+}
+
+.video > iframe {       /* Vídeo */
+    position: absolute;
+
+    /* Top para configurar o eixo vertical do video e left o eixo horizontal */ 
+    top: 5%;
+    left: 5%;
+
+    /* Tamanho e largura do vídeo */
+    width: 90%;
+    height: 90%;
+}
+
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+aside > ul {
+    list-style-type: "\2714\00A0\00A0";   /* Código do emoji "checked" (2714) pego na emojipedia. O código (00A0) é só para colocar um espaço*/
+    list-style-position: inside;  /* Posição das "bolinhas" da lista */
+    columns: 2;  /* Dividir em duas colunas */
+}
+
+aside h3 {
+    color: white;
+    background-color: var(--cor4);
+    padding: 5px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: var(--cor-negrito);
+    background-color: var(--cor-mono1);
+    padding: 2px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--cor3);
+
+}
+
+footer a {
+    background-color: #134127;
+    text-decoration: none;
+    color: rgb(106, 199, 168);
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: rgb(56, 158, 124);
+}
+
+footer p {
+    text-align: center;
+}
+
+footer {
+    background-color: #134127;
+    color: white;
+    padding: 5px;
+}
